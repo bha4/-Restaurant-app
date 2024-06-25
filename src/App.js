@@ -1,11 +1,12 @@
 import Header from "./components/Layout/Header";
-import RestaurantSummary from "./components/Meals/RestaurantSummary";
+import Meals from "./components/Meals/Meals";
+
 
 function App() {
   return (
     <>
       <Header />
-      <RestaurantSummary />
+      <Meals />
     </>
   );
 }
