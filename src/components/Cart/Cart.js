@@ -9,7 +9,16 @@ const Cart = (props) => {
     <ul className="cart-items">
       {cartCont.items.map((meal) => (
         <li>
-          {meal.name}  {meal.price}  {meal.quantity}
+          {meal.name} {meal.price} {meal.quantity}
+          <button
+            onClick={() => {
+              if (meal.quantity > 1) {
+                cartCont.updateItemQuantity(meal.id, meal.quantity - 1);
+              } else {
+                cartCont.removeItem(meal.id);
+              }
+            }}
+          >-</button>
         </li>
       ))}
     </ul>

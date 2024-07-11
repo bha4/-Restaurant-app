@@ -7,7 +7,10 @@ const Provider = (props) => {
        setItems([...items, item]);
      };
 ;
-   const removeItemFromCart =(id)=>{}
+   const removeItemFromCart =(id)=>{
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+   }
+   
     const cartContext = {
       items: items,
       addItem: addItemToCart,
